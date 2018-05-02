@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f4eb7cd9762fa847a5e7cf596a18721, type: 3}
+  m_Name: TurnAroundDx
+  m_EditorClassIdentifier: 
+  actions:
+  - {fileID: 11400000, guid: 7012b4dadd31c67448de07566394838d, type: 2}
+  transitions:
+  - decision: {fileID: 11400000, guid: fc234d5cdffbeea4db14531f4aeba159, type: 2}
+    trueState: {fileID: 11400000, guid: 9248c3facaca4d14392f76ed4b9586cf, type: 2}
+    falseState: {fileID: 11400000, guid: 69443007cac9b3a49b151f3a29117c7c, type: 2}
+  gizmosColor: {r: 1, g: 0.889655, b: 0, a: 1}
