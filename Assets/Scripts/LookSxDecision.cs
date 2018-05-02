@@ -5,13 +5,13 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "PluggableAI/Decision/LookSx")]
 public class LookSxDecision : Decision
 {
-    public override bool Decide(StateController controller)
+    public override int Decide(StateController controller)
     {
-        bool lookDecision = LookSx(controller);
+        int lookDecision = LookSx(controller);
         return lookDecision;
     }
 
-    private bool LookSx(StateController controller)
+    private int LookSx(StateController controller)
     {
         RaycastHit hit;
 
@@ -24,11 +24,16 @@ public class LookSxDecision : Decision
         {
             if (hit.collider.tag.StartsWith("Wall"))
             {
-                return true;
+                return 0;
             }
+            else if (hit.collider.tag.StartsWith("Enemy"))
+            {
+                return 2;
+            }
+
         }
 
-        return false;
+        return 1;
 
     }
 }

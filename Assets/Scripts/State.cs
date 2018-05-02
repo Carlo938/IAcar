@@ -27,16 +27,18 @@ public class State : ScriptableObject
     {
         for (int i = 0; i < transitions.Length; i++)
         {
-            bool decisionSucceded = transitions[i].decision.Decide(controller);
+            int decisionChosen = transitions[i].decision.Decide(controller);
 
-            if (decisionSucceded)
-            {
-                controller.TransitionState(transitions[i].trueState);
-            }
-            else
-            {
-                controller.TransitionState(transitions[i].falseState);
-            }
+            controller.TransitionState(transitions[i].possibleState[decisionChosen]);
+
+            //if (decisionSucceded)
+            //{
+            //    controller.TransitionState(transitions[i].);
+            //}
+            //else
+            //{
+            //    controller.TransitionState(transitions[i].falseState);
+            //}
         }
     }
 }

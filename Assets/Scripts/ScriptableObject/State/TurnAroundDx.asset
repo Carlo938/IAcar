@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Name: TurnAroundDx
   m_EditorClassIdentifier: 
   actions:
-  - {fileID: 11400000, guid: 7012b4dadd31c67448de07566394838d, type: 2}
+  - {fileID: 11400000, guid: aaa518e881aeaeb448adbb6f18268cb8, type: 2}
   transitions:
-  - decision: {fileID: 11400000, guid: fc234d5cdffbeea4db14531f4aeba159, type: 2}
-    trueState: {fileID: 11400000, guid: 9248c3facaca4d14392f76ed4b9586cf, type: 2}
-    falseState: {fileID: 11400000, guid: 69443007cac9b3a49b151f3a29117c7c, type: 2}
+  - decision: {fileID: 11400000, guid: e820ccb948a208d44aac83b505d4c6b8, type: 2}
+    possibleState:
+    - {fileID: 11400000, guid: ad7cf7e6ebb23664aba1a4c14b5ef83b, type: 2}
+    - {fileID: 11400000, guid: 69443007cac9b3a49b151f3a29117c7c, type: 2}
   gizmosColor: {r: 1, g: 0.889655, b: 0, a: 1}

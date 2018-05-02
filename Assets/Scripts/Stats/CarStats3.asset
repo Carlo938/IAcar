@@ -9,14 +9,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ecb4891b8e5f8e64e9ef1f55fe788f86, type: 3}
-  m_Name: CarStats
+  m_Name: CarStats3
   m_EditorClassIdentifier: 
   speed: 1
   rotSpeed: 50
   angleRotation: 10
-  accelerationMax: 30
+  accelerationMax: 25
   decelerationMax: 1
-  acceleration: 30
+  acceleration: 25
   deceleration: 1
   rayCastDxSxLength: 10
   rayCastDxSxAngle: 30

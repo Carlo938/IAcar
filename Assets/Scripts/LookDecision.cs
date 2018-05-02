@@ -5,13 +5,13 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "PluggableAI/Decision/Look")]
 public class LookDecision : Decision
 {
-    public override bool Decide(StateController controller)
+    public override int Decide(StateController controller)
     {
-        bool lookDecision = Look(controller);
+        int lookDecision = Look(controller);
         return lookDecision;
     }
 
-    private bool Look(StateController controller)
+    private int Look(StateController controller)
     {
         RaycastHit hit;
 
@@ -19,13 +19,18 @@ public class LookDecision : Decision
         
         if (Physics.Raycast(controller.eyes.position, controller.eyes.forward, out hit, controller.carStats.rayCastCenterLength))
         {
-            if (hit.collider.tag.StartsWith("Wall") || hit.collider.tag.StartsWith("Enemy"))
+            if (hit.collider.tag.StartsWith("Wall"))
             {
-                return true;
+                return 0;
             }
+            else if( hit.collider.tag.StartsWith("Enemy"))
+            {
+                return 2;
+            }
+            
         }
        
 
-        return false;
+        return 1;
     }
 }
