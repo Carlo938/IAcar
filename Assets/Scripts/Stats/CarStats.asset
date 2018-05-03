@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Name: CarStats
   m_EditorClassIdentifier: 
   speed: 1
-  rotSpeed: 50
+  rotSpeed: 30
   angleRotation: 10
-  accelerationMax: 30
+  accelerationMax: 12
   decelerationMax: 1
-  acceleration: 30
+  acceleration: 12
   deceleration: 1
-  rayCastDxSxLength: 10
-  rayCastDxSxAngle: 30
-  rayCastCenterLength: 15
+  rayCastDxSxLength: 6
+  rayCastDxSxAngle: 45
+  rayCastCenterLength: 10
   radius: 1
   listState:
   - {fileID: 11400000, guid: 9248c3facaca4d14392f76ed4b9586cf, type: 2}

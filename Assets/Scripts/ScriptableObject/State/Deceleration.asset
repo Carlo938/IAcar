@@ -16,7 +16,8 @@ MonoBehaviour:
   transitions:
   - decision: {fileID: 11400000, guid: 13a9ce11b7ad51845a7cbf561b6b1ac1, type: 2}
     possibleState:
-    - {fileID: 11400000, guid: ad7cf7e6ebb23664aba1a4c14b5ef83b, type: 2}
+    - {fileID: 11400000, guid: de0284510adcd464598a911f40de646f, type: 2}
+    - {fileID: 11400000, guid: 2364e2704b29a404c861b9779519be6d, type: 2}
     - {fileID: 11400000, guid: 69443007cac9b3a49b151f3a29117c7c, type: 2}
   - decision: {fileID: 11400000, guid: fc234d5cdffbeea4db14531f4aeba159, type: 2}
     possibleState:

@@ -15,21 +15,23 @@ public class LookSxDecision : Decision
     {
         RaycastHit hit;
 
+        Vector3 sideSensorPos = new Vector3(0, 0, 1f);
+        Vector3 LeftStartPos = controller.transform.position;
+        LeftStartPos -= controller.transform.right * sideSensorPos.z;
+
         Quaternion negrot = Quaternion.AngleAxis(-controller.carStats.rayCastDxSxAngle, controller.transform.up.normalized);
 
-        Debug.DrawRay(controller.transform.position, negrot * controller.transform.forward * controller.carStats.rayCastDxSxLength, Color.green);
+        Debug.DrawRay(LeftStartPos, controller.transform.forward * controller.carStats.rayCastCenterLength, Color.green);
+        Debug.DrawRay(LeftStartPos, negrot * controller.transform.forward * controller.carStats.rayCastDxSxLength, Color.green);
 
 
-        if (Physics.Raycast(controller.eyes.position, negrot * controller.eyes.forward, out hit, controller.carStats.rayCastDxSxLength))
+        if (Physics.Raycast(controller.transform.position, negrot * controller.transform.forward, out hit, controller.carStats.rayCastDxSxLength) || Physics.Raycast(LeftStartPos, controller.transform.forward, out hit, controller.carStats.rayCastDxSxLength))
         {
-            if (hit.collider.tag.StartsWith("Wall"))
+            if (hit.collider.tag.StartsWith("Wall") || hit.collider.tag.StartsWith("Enemy"))
             {
                 return 0;
             }
-            else if (hit.collider.tag.StartsWith("Enemy"))
-            {
-                return 2;
-            }
+            
 
         }
 

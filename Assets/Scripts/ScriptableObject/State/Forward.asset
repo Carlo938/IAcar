@@ -17,9 +17,9 @@ MonoBehaviour:
   transitions:
   - decision: {fileID: 11400000, guid: 13a9ce11b7ad51845a7cbf561b6b1ac1, type: 2}
     possibleState:
-    - {fileID: 11400000, guid: 9248c3facaca4d14392f76ed4b9586cf, type: 2}
-    - {fileID: 11400000, guid: ad7cf7e6ebb23664aba1a4c14b5ef83b, type: 2}
-    - {fileID: 11400000, guid: fddf0cf2787b3784ab00e25b1a6b4552, type: 2}
+    - {fileID: 11400000, guid: de0284510adcd464598a911f40de646f, type: 2}
+    - {fileID: 11400000, guid: 2364e2704b29a404c861b9779519be6d, type: 2}
+    - {fileID: 11400000}
   - decision: {fileID: 11400000, guid: fc234d5cdffbeea4db14531f4aeba159, type: 2}
     possibleState:
     - {fileID: 11400000, guid: 2364e2704b29a404c861b9779519be6d, type: 2}
